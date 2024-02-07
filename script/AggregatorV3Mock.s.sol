@@ -16,8 +16,12 @@ contract FeedRegistryMockScript is Script, D4AAddress {
         vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
 
         AggregatorV3Mock aggregator = new AggregatorV3Mock(1e18 / 2000, 18);
+        // FeedRegistryMock(oracleRegistry).setAggregator(
+        //     0x07865c6E87B9F70255377e024ace6630C1Eaa37F, 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE,
+        // address(aggregator)
+        // );
         FeedRegistryMock(oracleRegistry).setAggregator(
-            0x07865c6E87B9F70255377e024ace6630C1Eaa37F, 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE, address(aggregator)
+            0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238, 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE, address(aggregator)
         );
 
         vm.stopBroadcast();

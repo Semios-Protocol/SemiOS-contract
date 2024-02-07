@@ -16,7 +16,7 @@ contract FeedRegistryMockScript is Script, D4AAddress {
 
         FeedRegistryMock registry =
         new FeedRegistryMock{salt: 0xc769c7d0e1159c53805361a65aed876db7ce897be2b0e14d011237bc07fcab0c}(vm.addr(vm.envUint("PRIVATE_KEY")));
-        vm.toString(address(registry)).write(path, ".FeedRegistryMock");
+        vm.toString(address(registry)).write(path, ".OracleRegistry");
 
         vm.stopBroadcast();
     }

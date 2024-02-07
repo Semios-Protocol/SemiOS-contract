@@ -318,38 +318,38 @@ contract DeployDemo is Script, Test, D4AAddress {
         console2.log("================================================================================\n");
     }
 
-    function _deployD4ACreate() internal {
-        console2.log("\n================================================================================");
-        console2.log("Start deploy D4ACreate");
+    // function _deployD4ACreate() internal {
+    //     console2.log("\n================================================================================");
+    //     console2.log("Start deploy D4ACreate");
 
-        d4aCreate = new D4ACreate();
-        assertTrue(address(d4aCreate) != address(0));
+    //     d4aCreate = new D4ACreate();
+    //     assertTrue(address(d4aCreate) != address(0));
 
-        vm.toString(address(d4aCreate)).write(path, ".PDProtocol.D4ACreate");
+    //     vm.toString(address(d4aCreate)).write(path, ".PDProtocol.D4ACreate");
 
-        console2.log("D4ACreate address: ", address(d4aCreate));
-        console2.log("================================================================================\n");
-    }
+    //     console2.log("D4ACreate address: ", address(d4aCreate));
+    //     console2.log("================================================================================\n");
+    // }
 
-    function _cutFacetsD4ACreate() internal {
-        console2.log("\n================================================================================");
-        console2.log("Start cut D4ACreate facet");
+    // function _cutFacetsD4ACreate() internal {
+    //     console2.log("\n================================================================================");
+    //     console2.log("Start cut D4ACreate facet");
 
-        //------------------------------------------------------------------------------------------------------
-        // D4ACreate facet cut
-        bytes4[] memory selectors = getD4ACreateSelectors();
-        console2.log("D4ACreate facet cut selectors number: ", selectors.length);
+    //     //------------------------------------------------------------------------------------------------------
+    //     // D4ACreate facet cut
+    //     bytes4[] memory selectors = getD4ACreateSelectors();
+    //     console2.log("D4ACreate facet cut selectors number: ", selectors.length);
 
-        IDiamondWritableInternal.FacetCut[] memory facetCuts = new IDiamondWritableInternal.FacetCut[](1);
-        facetCuts[0] = IDiamondWritableInternal.FacetCut({
-            target: address(d4aCreate),
-            action: IDiamondWritableInternal.FacetCutAction.ADD,
-            selectors: selectors
-        });
-        D4ADiamond(payable(address(pdProtocol_proxy))).diamondCut(facetCuts, address(0), "");
+    //     IDiamondWritableInternal.FacetCut[] memory facetCuts = new IDiamondWritableInternal.FacetCut[](1);
+    //     facetCuts[0] = IDiamondWritableInternal.FacetCut({
+    //         target: address(d4aCreate),
+    //         action: IDiamondWritableInternal.FacetCutAction.ADD,
+    //         selectors: selectors
+    //     });
+    //     D4ADiamond(payable(address(pdProtocol_proxy))).diamondCut(facetCuts, address(0), "");
 
-        console2.log("================================================================================\n");
-    }
+    //     console2.log("================================================================================\n");
+    // }
 
     function _deployPDCreate() internal {
         console2.log("\n================================================================================");
@@ -882,18 +882,18 @@ contract DeployDemo is Script, Test, D4AAddress {
         console2.log("================================================================================\n");
     }
 
-    function _deployUnlocker() internal {
-        console2.log("\n================================================================================");
-        console2.log("Start deploy BasicDaoUnlocker");
+    // function _deployUnlocker() internal {
+    //     console2.log("\n================================================================================");
+    //     console2.log("Start deploy BasicDaoUnlocker");
 
-        basicDaoUnlocker = new BasicDaoUnlocker(address(pdProtocol_proxy));
-        assertTrue(address(basicDaoUnlocker) != address(0));
+    //     basicDaoUnlocker = new BasicDaoUnlocker(address(pdProtocol_proxy));
+    //     assertTrue(address(basicDaoUnlocker) != address(0));
 
-        vm.toString(address(basicDaoUnlocker)).write(path, ".BasicDaoUnlocker");
+    //     vm.toString(address(basicDaoUnlocker)).write(path, ".BasicDaoUnlocker");
 
-        console2.log("basicDaoUnlocker address: ", address(basicDaoUnlocker));
-        console2.log("================================================================================\n");
-    }
+    //     console2.log("basicDaoUnlocker address: ", address(basicDaoUnlocker));
+    //     console2.log("================================================================================\n");
+    // }
 
     function _initSettings() internal {
         console2.log("\n================================================================================");
@@ -922,36 +922,36 @@ contract DeployDemo is Script, Test, D4AAddress {
             console2.log("Step 4: change asset pool owner");
             D4ASettings(address(pdProtocol_proxy)).changeAssetPoolOwner(owner);
         }
-        {
-            console2.log("Step 5: set mintable rounds");
-            uint256[] memory mintableRounds = new uint256[](7);
-            mintableRounds[0] = 30;
-            mintableRounds[1] = 60;
-            mintableRounds[2] = 90;
-            mintableRounds[3] = 120;
-            mintableRounds[4] = 180;
-            mintableRounds[5] = 270;
-            mintableRounds[6] = 360;
-            D4ASettings(address(pdProtocol_proxy)).setMintableRounds(mintableRounds);
-        }
-        {
-            console2.log("Step 6: change floor prices");
-            uint256[] memory floorPrices = new uint256[](13);
-            floorPrices[0] = 0.01 ether;
-            floorPrices[1] = 0.02 ether;
-            floorPrices[2] = 0.03 ether;
-            floorPrices[3] = 0.05 ether;
-            floorPrices[4] = 0.1 ether;
-            floorPrices[5] = 0.2 ether;
-            floorPrices[6] = 0.3 ether;
-            floorPrices[7] = 0.5 ether;
-            floorPrices[8] = 1 ether;
-            floorPrices[9] = 2 ether;
-            floorPrices[10] = 3 ether;
-            floorPrices[11] = 5 ether;
-            floorPrices[12] = 10 ether;
-            D4ASettings(address(pdProtocol_proxy)).changeFloorPrices(floorPrices);
-        }
+        // {
+        //     console2.log("Step 5: set mintable rounds");
+        //     uint256[] memory mintableRounds = new uint256[](7);
+        //     mintableRounds[0] = 30;
+        //     mintableRounds[1] = 60;
+        //     mintableRounds[2] = 90;
+        //     mintableRounds[3] = 120;
+        //     mintableRounds[4] = 180;
+        //     mintableRounds[5] = 270;
+        //     mintableRounds[6] = 360;
+        //     D4ASettings(address(pdProtocol_proxy)).setMintableRounds(mintableRounds);
+        // }
+        // {
+        //     console2.log("Step 6: change floor prices");
+        //     uint256[] memory floorPrices = new uint256[](13);
+        //     floorPrices[0] = 0.01 ether;
+        //     floorPrices[1] = 0.02 ether;
+        //     floorPrices[2] = 0.03 ether;
+        //     floorPrices[3] = 0.05 ether;
+        //     floorPrices[4] = 0.1 ether;
+        //     floorPrices[5] = 0.2 ether;
+        //     floorPrices[6] = 0.3 ether;
+        //     floorPrices[7] = 0.5 ether;
+        //     floorPrices[8] = 1 ether;
+        //     floorPrices[9] = 2 ether;
+        //     floorPrices[10] = 3 ether;
+        //     floorPrices[11] = 5 ether;
+        //     floorPrices[12] = 10 ether;
+        //     D4ASettings(address(pdProtocol_proxy)).changeFloorPrices(floorPrices);
+        // }
         {
             console2.log("Step 7: change max NFT amounts");
             uint256[] memory maxNFTAmounts = new uint256[](5);
@@ -1089,7 +1089,7 @@ contract DeployDemo is Script, Test, D4AAddress {
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetAddresses()[0], address(pdProtocol_proxy));
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetAddresses()[1], address(pdProtocolReadable));
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetAddresses()[2], address(pdProtocolSetter));
-        assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetAddresses()[3], address(d4aCreate));
+        // assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetAddresses()[3], address(d4aCreate));
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetAddresses()[4], address(pdCreate));
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetAddresses()[5], address(pdBasicDao));
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetAddresses()[6], address(d4aSettings));
@@ -1103,7 +1103,8 @@ contract DeployDemo is Script, Test, D4AAddress {
         assertEq(
             D4ADiamond(payable(address(pdProtocol_proxy))).facetFunctionSelectors(address(pdProtocolSetter)).length, 12
         );
-        assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetFunctionSelectors(address(d4aCreate)).length, 3);
+        // assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetFunctionSelectors(address(d4aCreate)).length,
+        // 3);
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetFunctionSelectors(address(pdCreate)).length, 4);
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).facetFunctionSelectors(address(d4aSettings)).length, 35);
         assertEq(D4ADiamond(payable(address(pdProtocol_proxy))).getFallbackAddress(), address(pdProtocol_impl));
@@ -1120,8 +1121,8 @@ contract DeployDemo is Script, Test, D4AAddress {
         assertEq(D4ASettings(address(pdProtocol_proxy)).createProjectFee(), 0);
         assertEq(D4ASettings(address(pdProtocol_proxy)).getPriceTemplates()[0], address(exponentialPriceVariation));
         assertEq(D4ASettings(address(pdProtocol_proxy)).getPriceTemplates()[1], address(linearPriceVariation));
-        assertEq(D4ASettings(address(pdProtocol_proxy)).getRewardTemplates()[0], address(linearRewardIssuance));
-        assertEq(D4ASettings(address(pdProtocol_proxy)).getRewardTemplates()[1], address(exponentialRewardIssuance));
+        // assertEq(D4ASettings(address(pdProtocol_proxy)).getRewardTemplates()[0], address(linearRewardIssuance));
+        // assertEq(D4ASettings(address(pdProtocol_proxy)).getRewardTemplates()[1], address(exponentialRewardIssuance));
         assertTrue(D4ASettings(address(pdProtocol_proxy)).hasRole(DEFAULT_ADMIN_ROLE, multisig));
         assertTrue(D4ASettings(address(pdProtocol_proxy)).hasRole(PROTOCOL_ROLE, multisig));
         assertTrue(D4ASettings(address(pdProtocol_proxy)).hasRole(OPERATION_ROLE, multisig2));
