@@ -1148,6 +1148,8 @@ contract Deploy is Script, Test, D4AAddress {
     function _createDao() internal {
         UserMintCapParam[] memory userMintCapParams = new UserMintCapParam[](0);
         NftMinterCapInfo[] memory nftMinterCapInfo = new NftMinterCapInfo[](0);
+        uint256 a = 40_000_000_000_000_000;
+        uint256 b = 1_000_000_000_000_000_000;
 
         bytes32 daoId = IPDCreate(address(pdProtocol_proxy)).createDao(
             bytes32(0),

@@ -44,76 +44,84 @@ contract DeployDemo is Script, Test, D4AAddress {
 
         // _deployDrb();
 
-        _deployFeePoolFactory();
+        // _deployFeePoolFactory();
 
-        _deployRoyaltySplitterFactory();
+        // _deployRoyaltySplitterFactory();
 
-        _deployERC20Factory();
+        // _deployERC20Factory();
 
-        _deployERC721WithFilterFactory();
+        // _deployERC721WithFilterFactory();
 
-        _deployProxyAdmin();
+        // _deployProxyAdmin();
 
-        _deployNaiveOwner();
-        _deployNaiveOwnerProxy();
+        // _deployNaiveOwner();
+        // _deployNaiveOwnerProxy();
 
-        _deployProtocolProxy();
-        _deployProtocol();
+        // _deployProtocolProxy();
+        // _deployProtocol();
 
-        _deployProtocolReadable();
-        _cutProtocolReadableFacet(DeployMethod.ADD);
+        // _deployProtocolReadable();
+        // _cutProtocolReadableFacet(DeployMethod.ADD);
 
-        _deployProtocolSetter();
-        _cutFacetsProtocolSetter(DeployMethod.ADD);
+        // _deployProtocolSetter();
+        // _cutFacetsProtocolSetter(DeployMethod.ADD);
 
-        // _deployD4ACreate();
-        // _cutFacetsD4ACreate();
+        // // _deployD4ACreate();
+        // // _cutFacetsD4ACreate();
 
-        _deployPDCreate();
-        _cutFacetsPDCreate(DeployMethod.ADD);
+        // _deployPDCreate();
+        // _cutFacetsPDCreate(DeployMethod.ADD);
 
-        _deployPDRound();
-        _cutFacetsPDRound(DeployMethod.ADD);
+        // _deployPDRound();
+        // _cutFacetsPDRound(DeployMethod.ADD);
 
-        _deployPDLock();
-        _cutFacetsPDLock(DeployMethod.ADD);
+        // _deployPDLock();
+        // _cutFacetsPDLock(DeployMethod.ADD);
 
-        //_deployPDCreateFunding();
-        //_cutFacetsPDCreateFunding(DeployMethod.REMOVE);
+        // //_deployPDCreateFunding();
+        // //_cutFacetsPDCreateFunding(DeployMethod.REMOVE);
 
-        _deployPDBasicDao();
-        _cutFacetsPDBasicDao(DeployMethod.ADD);
+        // _deployPDBasicDao();
+        // _cutFacetsPDBasicDao(DeployMethod.ADD);
 
-        _deploySettings();
-        _cutSettingsFacet(DeployMethod.ADD);
+        // _deploySettings();
+        // _cutSettingsFacet(DeployMethod.ADD);
 
-        // _deployClaimer();
-        _deployUniversalClaimer();
+        // // _deployClaimer();
+        // _deployUniversalClaimer();
 
-        //_deployCreateProjectProxy();
-        //_deployCreateProjectProxyProxy();
+        // //_deployCreateProjectProxy();
+        // //_deployCreateProjectProxyProxy();
 
-        _deployPermissionControl();
-        _deployPermissionControlProxy();
+        // _deployPermissionControl();
+        // _deployPermissionControlProxy();
 
-        _initSettings();
-        _initSettings13();
+        // _initSettings();
+        // _initSettings13();
 
-        _deployLinearPriceVariation();
-        _deployExponentialPriceVariation();
-        // _deployLinearRewardIssuance();
-        // _deployExponentialRewardIssuance();
-        _deployUniformDistributionRewardIssuance();
-        console2.log("initializing:");
-        pdProtocol_proxy.initialize();
-        console2.log("initialize complete");
+        // _deployLinearPriceVariation();
+        // _deployExponentialPriceVariation();
+        // // _deployLinearRewardIssuance();
+        // // _deployExponentialRewardIssuance();
+        // _deployUniformDistributionRewardIssuance();
+        // console2.log("initializing:");
+        // pdProtocol_proxy.initialize();
+        // console2.log("initialize complete");
 
-        PDBasicDao(address(pdProtocol_proxy)).setBasicDaoNftFlatPrice(0.01 ether);
-        PDBasicDao(address(pdProtocol_proxy)).setSpecialTokenUriPrefix(
-            "https://test-protodao.s3.ap-southeast-1.amazonaws.com/meta/work/"
-        );
+        // PDBasicDao(address(pdProtocol_proxy)).setBasicDaoNftFlatPrice(0.01 ether);
+        // PDBasicDao(address(pdProtocol_proxy)).setSpecialTokenUriPrefix(
+        //     "https://test-protodao.s3.ap-southeast-1.amazonaws.com/meta/work/"
+        // );
 
         // _deployUnlocker();
+        D4ASettings(address(pdProtocol_proxy)).changeAddress(
+            address(d4aDrb),
+            address(d4aERC20Factory),
+            address(d4aERC721WithFilterFactory),
+            address(d4aFeePoolFactory),
+            address(naiveOwner_proxy),
+            address(permissionControl_proxy)
+        );
 
         vm.stopBroadcast();
     }
@@ -965,7 +973,7 @@ contract DeployDemo is Script, Test, D4AAddress {
                 address(d4aERC20Factory),
                 address(d4aERC721WithFilterFactory),
                 address(d4aFeePoolFactory),
-                json.readAddress(".NaiveOwner.proxy"),
+                address(naiveOwner_proxy),
                 address(permissionControl_proxy)
             );
         }
