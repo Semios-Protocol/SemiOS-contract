@@ -3,7 +3,7 @@
 [![Chat][tg-badge]][tg-url]
 
 [mit-license]: https://opensource.org/license/mit/
-[gh-ci]: https://github.com/Semios-Protocol/SemiOS-contract/actions/workflows/test.yml
+[gh-ci]: https://github.com/Semios-Protocol/SemiOS-contract/actions/workflows/main.yml
 [tg-url]:  https://t.me/c/2070866902/1
 [tg-badge]: https://img.shields.io/badge/chat-telegram-blue
 ## Getting Started
