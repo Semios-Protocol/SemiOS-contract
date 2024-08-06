@@ -1,4 +1,4 @@
-[![CI](https://github.com/Semios-Protocol/SemiOS-contract/actions/workflows/ci.yml/badge.svg)][gh-ci]
+[![CI](https://github.com/Semios-Protocol/SemiOS-contract/actions/workflows/main.yml/badge.svg)][gh-ci]
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)][mit-license]
 [![Chat][tg-badge]][tg-url]
 
