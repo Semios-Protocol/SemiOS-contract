@@ -16,7 +16,7 @@ importers:
         version: 0.0.230
     devDependencies:
       '@chainlink/contracts':
-        specifier: ^1.1.1
+        specifier: ^1.2.0
         version: 1.2.0(ethers@6.9.1)
       '@openzeppelin/contracts':
         specifier: ^4.9.3
