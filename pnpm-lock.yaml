@@ -40,8 +40,8 @@ importers:
         specifier: ^2.8.7
         version: 2.8.8
       solhint-community:
-        specifier: ^3.5.0
-        version: 3.7.0
+        specifier: ^4.0.0
+        version: 4.0.0
 
 packages:
 
@@ -853,8 +853,8 @@ packages:
   solady@0.0.230:
     resolution: {integrity: sha512-6a1bR6YuWdwMnnsD0lSWj2HtJ86OVKVN1S3mab6PXfNobzSGC9Sf+ObDPrsLtaC6epOw77luEc1GXC55E71bHw==}
 
-  solhint-community@3.7.0:
-    resolution: {integrity: sha512-8nfdaxVll+IIaEBHFz3CzagIZNNTGp4Mrr+6O4m7c9Bs/L8OcgR/xzZJFwROkGAhV8Nbiv4gqJ42nEXZPYl3Qw==}
+  solhint-community@4.0.0:
+    resolution: {integrity: sha512-BERw3qYzkJE64EwvYrp2+iiTN8yAZOJ74FCiL4bTBp7v0JFUvRYCEGZKAqfHcfi/koKkzM6qThsJUceKm9vvfg==}
     hasBin: true
 
   spawndamnit@2.0.0:
@@ -1994,7 +1994,7 @@ snapshots:
 
   solady@0.0.230: {}
 
-  solhint-community@3.7.0:
+  solhint-community@4.0.0:
     dependencies:
       '@solidity-parser/parser': 0.16.2
       ajv: 6.12.6
