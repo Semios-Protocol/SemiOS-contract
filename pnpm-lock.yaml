@@ -28,8 +28,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7
       '@solidstate/contracts':
-        specifier: ^0.0.57
-        version: 0.0.57
+        specifier: ^0.0.60
+        version: 0.0.60
       '@uniswap/v2-core':
         specifier: ^1.0.1
         version: 1.0.1
@@ -252,8 +252,8 @@ packages:
   '@solidity-parser/parser@0.16.2':
     resolution: {integrity: sha512-PI9NfoA3P8XK2VBkK5oIfRgKDsicwDZfkVq9ZTBCQYGOP1N2owgY2dyLGyU5/J/hQs8KRk55kdmvTLjy3Mu3vg==}
 
-  '@solidstate/contracts@0.0.57':
-    resolution: {integrity: sha512-eDH8gVrbt2eayVYL9aqqOYbsAaXv2MNECNwiLOBuahtacTVsaArFE9bAKRAL3gDc6Gc3RuOQqWTm3OA6e7YAPw==}
+  '@solidstate/contracts@0.0.60':
+    resolution: {integrity: sha512-MR2ABrtDCfRPbNobuogkYZI5JviSQT/6pEhQHAHZz+WhpkRrrZX2shZX1vmTptf45zWbzXaprx+irmW/xErqlg==}
 
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
@@ -1426,7 +1426,7 @@ snapshots:
     dependencies:
       antlr4ts: 0.5.0-alpha.4
 
-  '@solidstate/contracts@0.0.57': {}
+  '@solidstate/contracts@0.0.60': {}
 
   '@types/node@12.20.55': {}
 
