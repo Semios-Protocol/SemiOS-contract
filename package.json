@@ -10,8 +10,8 @@
     "@solidstate/contracts": "^0.0.57",
     "@uniswap/v2-core": "^1.0.1",
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
-    "prettier": "^2.8.7",
-    "solhint-community": "^4.0.0"
+    "prettier": "^3.3.3",
+    "solhint-community": "^3.5.0"
   },
   "keywords": [
     "blockchain",
