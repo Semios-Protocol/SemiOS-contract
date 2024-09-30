@@ -12,8 +12,8 @@ importers:
         specifier: ^6.8.1
         version: 6.9.1
       solady:
-        specifier: ^0.0.230
-        version: 0.0.230
+        specifier: ^0.0.246
+        version: 0.0.246
     devDependencies:
       '@chainlink/contracts':
         specifier: ^1.2.0
@@ -25,7 +25,7 @@ importers:
         specifier: ^4.8.2
         version: 4.9.5
       '@openzeppelin/merkle-tree':
-        specifier: ^1.0.7
+        specifier: ^1.0.4
         version: 1.0.7
       '@solidstate/contracts':
         specifier: ^0.0.60
@@ -40,8 +40,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       solhint-community:
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^3.5.0
+        version: 3.7.0
 
 packages:
 
@@ -837,11 +837,11 @@ packages:
     resolution: {integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==}
     engines: {node: '>=10'}
 
-  solady@0.0.230:
-    resolution: {integrity: sha512-6a1bR6YuWdwMnnsD0lSWj2HtJ86OVKVN1S3mab6PXfNobzSGC9Sf+ObDPrsLtaC6epOw77luEc1GXC55E71bHw==}
+  solady@0.0.246:
+    resolution: {integrity: sha512-SotcVbKUcz/d3aa4U58mIjxeOJwjSW5pLtPJJbpzm+N2F4iKfRrolMTW0M5nKwhrZcwqDnUGpNdlykZSvhd27g==}
 
-  solhint-community@4.0.0:
-    resolution: {integrity: sha512-BERw3qYzkJE64EwvYrp2+iiTN8yAZOJ74FCiL4bTBp7v0JFUvRYCEGZKAqfHcfi/koKkzM6qThsJUceKm9vvfg==}
+  solhint-community@3.7.0:
+    resolution: {integrity: sha512-8nfdaxVll+IIaEBHFz3CzagIZNNTGp4Mrr+6O4m7c9Bs/L8OcgR/xzZJFwROkGAhV8Nbiv4gqJ42nEXZPYl3Qw==}
     hasBin: true
 
   spawndamnit@2.0.0:
@@ -1959,9 +1959,9 @@ snapshots:
       astral-regex: 2.0.0
       is-fullwidth-code-point: 3.0.0
 
-  solady@0.0.230: {}
+  solady@0.0.246: {}
 
-  solhint-community@4.0.0:
+  solhint-community@3.7.0:
     dependencies:
       '@solidity-parser/parser': 0.16.2
       ajv: 6.12.6
