@@ -25,7 +25,7 @@ importers:
         specifier: ^4.8.2
         version: 4.9.5
       '@openzeppelin/merkle-tree':
-        specifier: ^1.0.7
+        specifier: ^1.0.4
         version: 1.0.7
       '@solidstate/contracts':
         specifier: ^0.0.60
@@ -37,11 +37,11 @@ importers:
         specifier: ^1.1.0-beta.0
         version: 1.1.0-beta.0
       prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
+        specifier: ^3.4.2
+        version: 3.4.2
       solhint-community:
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^3.5.0
+        version: 3.7.0
 
 packages:
 
@@ -765,8 +765,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -840,8 +840,8 @@ packages:
   solady@0.0.230:
     resolution: {integrity: sha512-6a1bR6YuWdwMnnsD0lSWj2HtJ86OVKVN1S3mab6PXfNobzSGC9Sf+ObDPrsLtaC6epOw77luEc1GXC55E71bHw==}
 
-  solhint-community@4.0.0:
-    resolution: {integrity: sha512-BERw3qYzkJE64EwvYrp2+iiTN8yAZOJ74FCiL4bTBp7v0JFUvRYCEGZKAqfHcfi/koKkzM6qThsJUceKm9vvfg==}
+  solhint-community@3.7.0:
+    resolution: {integrity: sha512-8nfdaxVll+IIaEBHFz3CzagIZNNTGp4Mrr+6O4m7c9Bs/L8OcgR/xzZJFwROkGAhV8Nbiv4gqJ42nEXZPYl3Qw==}
     hasBin: true
 
   spawndamnit@2.0.0:
@@ -1908,7 +1908,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.3.3: {}
+  prettier@3.4.2: {}
 
   pseudomap@1.0.2: {}
 
@@ -1961,7 +1961,7 @@ snapshots:
 
   solady@0.0.230: {}
 
-  solhint-community@4.0.0:
+  solhint-community@3.7.0:
     dependencies:
       '@solidity-parser/parser': 0.16.2
       ajv: 6.12.6
